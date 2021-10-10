@@ -10,8 +10,12 @@ describe CoinData do
   end
 
   describe 'task 1' do
+    let (:tast_1_output) { coin_data.task_1_output }
+
     it 'lists the loaded payload' do
-      expect(coin_data.task_1_output).not_to be_empty
+      expect(tast_1_output).not_to be_empty
+      expect(tast_1_output.first).to be_kind_of(Hash)
+      expect(tast_1_output.first).to have_key('id')
     end
   end
 
