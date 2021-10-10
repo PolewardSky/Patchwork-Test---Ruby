@@ -16,14 +16,20 @@ ARGV.each do
   puts cd.task_2_output(param: param, ticker: ticker)
 
   puts 'Task 3'
-  puts 'What currency shall we show the crypto in?'
+  puts 'Convert currency to FIAT value?'
+  puts 'What coin\'s value do you want to see? e.g. BTC'
+  ticker = STDIN.gets.chomp
+  puts 'What FIAT currency do you want to show the currency in? e.g. GBP'
   currency = STDIN.gets.chomp
-  puts cd.task_3_output(currency: currency)
+  puts cd.task_3_output(ticker: ticker, currency: currency)
 
   puts 'Task 4'
-  puts 'What currency shall we compare the crypto to?'
-  compare = STDIN.gets.chomp
-  puts cd.task_4_output(compare: compare)
+  puts 'Compare the dollar values of 2 cryptos'
+  puts 'First crypto e.g. BTC'
+  compare_first = STDIN.gets.chomp
+  puts 'Second crypto e.g. ETH'
+  compare_second = STDIN.gets.chomp
+  puts "1 #{compare_first} == #{cd.task_4_output(compare_first: compare_first, compare_second: compare_second)}#{compare_second}"
 end
 
-puts 'Processing complete'
+puts 'Test complete'
