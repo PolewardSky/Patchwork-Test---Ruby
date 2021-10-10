@@ -8,7 +8,7 @@ describe CoinData do
   it 'creates object' do
     expect(subject).to have_attributes({})
   end
-  
+
   describe 'task 1' do
     it 'lists the loaded payload' do
       expect(coin_data.task_1_output).not_to be_empty

@@ -9,7 +9,7 @@ ARGV.each do
   puts cd.task_1_output
 
   puts 'Task 2'
-  puts 'Please provide dynamic param to download e.g. [circulating_supply, max_supply, name, symbol, price]'
+  puts 'Please provide dynamic param to download e.g. [circulating_supply, max_supply, name, symbol, price]' # rubocop:disable Layout/LineLength
   param = STDIN.gets.chomp
   puts 'Please provide crypto ticker name to view e.g. [ETH, BTC]'
   ticker = STDIN.gets.chomp
@@ -29,7 +29,7 @@ ARGV.each do
   compare_first = STDIN.gets.chomp
   puts 'Second crypto e.g. ETH'
   compare_second = STDIN.gets.chomp
-  puts "1 #{compare_first} == #{cd.task_4_output(compare_first: compare_first, compare_second: compare_second)}#{compare_second}"
+  puts "1 #{compare_first} == #{cd.task_4_output(compare_first: compare_first, compare_second: compare_second)}#{compare_second}" # rubocop:disable Layout/LineLength
 end
 
 puts 'Test complete'
