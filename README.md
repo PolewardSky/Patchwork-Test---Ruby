@@ -1,5 +1,7 @@
-# SmartPension
+# Patchwork test
  Ruby Test - list of crypto coins and some data manipulatation methods
+
+ API to make crypto currency calculations
 
 # Instructions
   

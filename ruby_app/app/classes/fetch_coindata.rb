@@ -28,7 +28,7 @@ class CoinData
   def task_3_output(ticker: '', currency: '')
     call_api(payload: @payload, currency: currency)
     tick = get_ticker(ticker)
-    tick['price']
+    tick['price'].to_f
   end
 
   def task_4_output(compare_first: '', compare_second: '')
